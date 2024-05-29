@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Rivoluzione Italiana</title>
+    <link rel="icon" type="image/png" href="file.jpg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="colonna" id="eventContent"></div>
+      <div class="colonna" id="eventContent2"></div>
+      <div class="colonna" id="eventContent3"></div>
+      <!-- <div class="colonna" id="eventContent4" ></div>  -->
+    </div>
+
+    <select id="eventSelect">
+        <option value="#1">Un'infanzia felice</option>
+        <option value="#2">Il 'carcere' recanatese</option>
+        <option value="#3">Lontano da Recanati</option>
+        <option value="#4">Il periodo fiorentino</option>
+        <option value="#5">Il periodo naopletano</option>
+        <option value="#6">Pessimismo storico</option>
+        <option value="#7">Pessimismo cosmico ed eroico</option>
+        <option value="#8">I Canti</option>
+    </select>
+
+    <b>Developed by <a href="https://github.com/R3BU5k">R3BU5</a></b>
+    <script src="scripts.js"></script>
+  </body>
+  <script>
+    const eventsData = [
+      {
+        id: "1",
+        title: "Un'infanzia felice",
+        image: "vita.jpg",
+        details:
+          "Giacomo Leopardi nacque a Recanati il 29 giugno 1798, primo di 10 figli. Visse un’infanzia felice con la madre Adelaide Antici e i fratelli Carlo e Paolina. Dopo una crisi finanziaria provocata dal padre Giacomo, conte Monaldo, fu costretto a un isolamento forzato durante il quale trascorse 7 anni sui libri, acculturandosi tanto da compromettere la salute fisica e psichica. Appena diciottenne, ebbe una conversione letteraria, cambiò il suo pensiero scambiando epistole con Pietro Giordani.",
+      },
+      {
+        id: "2",
+        title: "Il 'carcere' recanatese",
+        image: "zibaldone.jpg",
+        details:
+          "Voleva scappare dal suo paese, ma venne scoperto dal padre. La conversione dal bello al vero portò Leopardi ad abbracciare le teorie materialistiche. In questo periodo scrisse 'L'infinito', 'Ultimo canto di Saffo' e un diario privato, lo 'Zibaldone', che contiene i suoi pensieri e riflessioni in prosa.",
+      },
+      {
+        id: "3",
+        title: "Lontano da Recanati",
+        image: "monti.jpg",
+        details:
+          "Nel 1822 arrivò a Roma, ma rimase deluso dalla superficialità e dalla corruzione che lo circondavano. Riscontrando un profondo vuoto, ritornò a Recanati. Accantonò la poesia e scrisse le 'Operette morali', una raccolta di 24 componimenti in prosa filosofica, divisi tra dialoghi e novelle dallo stile medio-alto e ironico, composti tra il 1824 e il 1832. Si stabilì a Milano, dove conobbe Vincenzo Monti, poi a Bologna, Firenze e Pisa. Riprese la poesia e scrisse 'Il Risorgimento' e 'A Silvia', i grandi canti pisano-recanatesi. ",
+      },
+      {
+        id: "4",
+        title: "Il periodo fiorentino",
+        image: "fanny.jpg",
+        details:
+          "Costretto a ritornare a Recanati per la morte del fratello Luigi, cadde in depressione e compose i canti: 'La quiete dopo la tempesta', 'Il sabato del villaggio' e il 'Canto notturno di un pastore errante dell’Asia'. Nel 1830 si trasferì a Firenze, dove conobbe Stendhal e Manzoni. Si innamorò di Fanny Targioni Tozzetti (moglie di un famoso medico); questo amore non ricambiato ispirò le liriche del 'Ciclo di Aspasia'.",
+      },
+      {
+        id: "5",
+        title: "Il periodo napoletano",
+        image: "ranieri.jpg",
+        details:
+          "Nel 1833, Leopardi partì per Napoli con l’inseparabile amico Antonio Ranieri (patriota, scrittore e politico italiano). Con la salute già compromessa, per sfuggire al colera si recò a Torre del Greco, dove compose 'La ginestra', il suo testamento poetico. Leopardi spirò a Napoli il 14 giugno 1837 a soli 39 anni. Le sue spoglie si trovano al <a href=\"https://www.google.it/maps/place/Parco+Vergiliano+a+Piedigrotta/@40.830317,14.2179532,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMmyhGLbLva3BLwFqVwVuzQYLuYsU6lhcLz5wLV!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMmyhGLbLva3BLwFqVwVuzQYLuYsU6lhcLz5wLV%3Dw203-h253-k-no!7i1440!8i1800!4m20!1m10!3m9!1s0x133b091889229913:0x381f83f698709c27!2sParco+Vergiliano+a+Piedigrotta!8m2!3d40.830317!4d14.2179532!10e5!14m1!1BChEqDS9nLzExY3A1am5sMmwwCw!16zL20vMGg2NHcx!3m8!1s0x133b091889229913:0x381f83f698709c27!8m2!3d40.830317!4d14.2179532!10e5!14m1!1BChEqDS9nLzExY3A1am5sMmwwCw!16zL20vMGg2NHcx?entry=ttu\" style=\"color:blue;\">Parco Vergiliano a Piedigrotta</a>. L’amico Ranieri si occupò di diffondere le sue opere postume.",
+      },
+      {
+        id: "6",
+        title: "Pessimismo storico",
+        image: "infinito.jpg",
+        details:
+          "Il pessimismo per Leopardi rappresenta l’isolamento e le sofferenze dell’uomo, provate in prima persona. Dal 1816 al 1819, i critici definiscono il 'pessimismo storico' di Leopardi, secondo cui l’infelicità non dipende dalla natura, ma dall’evoluzione della civiltà (la ragione che svela la triste realtà sgretolando le illusioni). Una profonda crisi lo allontanò dalla religione cattolica, portandolo a credere che l’unico modo per raggiungere la felicità fosse il piacere legato alla materia. Tale piacere illusorio si ottiene attraverso l’immaginazione, nel ricordo o nell’attesa.",
+      },
+      {
+        id: "7",
+        title: "Pessimismo cosmico ed eroico",
+        image: "silvia.jpg",
+        details:
+          "Dal 1823 al 1829, si manifestò il cosiddetto 'pessimismo cosmico': l’infelicità non è il risultato di un processo storico, ma un dato assoluto (come si evince dallo 'Zibaldone'), dove l’uomo è destinato a soffrire per tutta l’esistenza. Nell’ultimo periodo della sua vita, definito 'pessimismo eroico', Leopardi ebbe una visione più profonda, riscoprendo la solidarietà fra gli uomini. Così nella 'Ginestra' (il fiore trovato sul Vesuvio) ci lascia un insegnamento morale e civile: tutti gli uomini devono unirsi come una catena contro la natura per dividersi il dolore. Per Leopardi, la ginestra simboleggiava l’umanità intera, con il coraggio, l’orgoglio e la resistenza, che poteva continuare a esistere nonostante la lava intorno, riferendosi al Vesuvio che nell’eruzione di Pompei distrusse tutto ciò che incontrò lungo il cammino. Nel 'Ciclo di Aspasia' si riscontrano immagini vaghe e un linguaggio studiato secco, per risaltare la verità e i sentimenti umani. Per Leopardi la poesia non ha solo una funzione sociale, ma deve confortare l’uomo dalla sua condizione dolorosa.",
+      },
+      {
+        id: "8",
+        title: "I Canti",
+        image: "canti2.jpg",
+        details:
+          "La raccolta dei 'Canti leopardiani' è composta da 41 componimenti di diversa lunghezza, pubblicati nel 1845 da Ranieri. È divisa in 3 gruppi: <br>-Canzoni e idilli: tutti in endecasillabi sciolti (autobiografici), sperimenta un linguaggio nuovo con un verso melodioso per il vago e l’indefinito. Qui si riscontra il pessimismo storico. <br>-I Canti pisano-recanatesi: conosciuti come grandi idilli, segnano una svolta di pensiero, con un linguaggio più elaborato (pessimismo cosmico). <br>-Il Ciclo di Aspasia: comprende 5 liriche ('Il pensiero dominante', 'Amore e morte', 'Consalvo', 'Aspasia', 'A se stesso') legate all’amore infelice per Fanny Targioni Tozzetti. L’amore, prima visto come un traguardo, si rivela poi una delusione. Il suo testamento poetico lo lascia nel soggiorno napoletano con 'La Ginestra'. Dal suo pessimismo nasce la speranza: il piccolo fiore riesce a resistere alla forza del vulcano, simbolo di resistenza e fratellanza, entrambi figli della natura matrigna.",
+      },
+      // Aggiungi altri dati degli eventi...
+    ];
+
+    const select = document.getElementById("eventSelect");
+    const contentContainers = document.querySelectorAll(".colonna");
+
+    // Funzione per generare il contenuto della sezione in base all'evento selezionato
+    function generateEventContent(eventId, index) {
+      const event = eventsData.find((item) => item.id === eventId);
+      if (event && index >= 0 && index < contentContainers.length) {
+        // Crea il markup HTML per l'evento corrente
+        const eventHTML = `
+                <section id="${event.id}">
+                    <div>
+                        <img class="fullscreen-btn" src="${event.image}">
+                    </div>
+                    <details>
+                        <summary class="sticky">${event.title}</summary>
+                        <p>${event.details}</p>
+                    </details>
+                </section>
+        `;
+        // Aggiungi il markup HTML al contenuto del contenitore appropriato
+        contentContainers[index].innerHTML += eventHTML;
+      }
+    }
+
+    // Gestione dell'evento onchange del select
+    select.addEventListener("change", function () {
+      const selectedIndex = this.selectedIndex;
+      const selectedOption = this.options[selectedIndex];
+      const eventId = selectedOption.value.slice(1);
+
+      // Rimuovi tutti gli eventi attualmente visualizzati
+      contentContainers.forEach((container) => (container.innerHTML = ""));
+
+      // Genera il contenuto per l'evento selezionato
+      generateEventContent(eventId, selectedIndex % contentContainers.length);
+      //loadContent();
+    });
+
+    function loadContent() {
+      // Verifica la larghezza del dispositivo e genera il contenuto iniziale di conseguenza
+      if (window.innerWidth > 1000) {
+        // Genera il contenuto iniziale basato sulla selezione predefinita
+        for (let i = 0; i < select.options.length; i++) {
+          generateEventContent(
+            select.options[i].value.slice(1),
+            i % contentContainers.length
+          );
+        }
+      } else {
+        // Genera il contenuto iniziale basato sulla selezione predefinita con un indice fisso
+        for (let i = 0; i < select.options.length; i++) {
+          generateEventContent(select.options[i].value.slice(1), 1);
+        }
+      }
+    }
+    loadContent();
+  </script>
+</html>
